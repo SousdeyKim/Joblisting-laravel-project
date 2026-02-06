@@ -72,8 +72,8 @@ http://127.0.0.1:8000
 
 Typical Laravel folders:
 
-app/ — Application logic
-database/ — Migrations & seeders
-resources/views/ — Blade templates
-routes/web.php — Web routes
-public/ — Public files
+  app/ — Application logic
+  database/ — Migrations & seeders
+  resources/views/ — Blade templates
+  routes/web.php — Web routes
+  public/ — Public files
