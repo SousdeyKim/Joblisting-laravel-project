@@ -16,7 +16,6 @@ It focuses on teaching core Laravel concepts through a real application example.
 ✔ Job listing CRUD (Create, Read, Update, Delete)
 ✔ Database migrations & models
 ✔ Blade templates for UI
-✔ Basic search/filtering functionality
 
 🛠️ Getting Started
 
