@@ -23,38 +23,38 @@ It focuses on teaching core Laravel concepts through a real application example.
 Follow these steps to run the project locally:
 
 1. Clone the repository
-git clone https://github.com/SousdeyKim/Joblisting-laravel-project.git
-cd Joblisting-laravel-project
+   git clone https://github.com/SousdeyKim/Joblisting-laravel-project.git
+   cd Joblisting-laravel-project
 2. Install dependencies
-composer install
-npm install
+   composer install
+   npm install
 3. Environment setup
 
-Copy .env.example to .env:
+    Copy .env.example to .env:
 
-cp .env.example .env
+    cp .env.example .env
 
-Generate an application key:
+    Generate an application key:
 
-php artisan key:generate
+    php artisan key:generate
 
-Update your .env file with your database settings.
+    Update your .env file with your database settings.
 
-If you use SQLite instead of MySQL, you can create a database file:
+    If you use SQLite instead of MySQL, you can create a database file:
 
-touch database/database.sqlite
+    touch database/database.sqlite
 
-Then set:
+    Then set:
 
-DB_CONNECTION=sqlite
-DB_DATABASE=/absolute/path/to/database/database.sqlite
+    DB_CONNECTION=sqlite
+    DB_DATABASE=/absolute/path/to/database/database.sqlite 
+
 4. Run migrations
 php artisan migrate
 
 (Optional) Seed the database if you added seeders:
 
-php artisan db:seed
-5. Run the development servers
+php artisan db:seed 5. Run the development servers
 
 Start the Laravel backend:
 
@@ -72,8 +72,8 @@ http://127.0.0.1:8000
 
 Typical Laravel folders:
 
-app/                — Application logic
-database/           — Migrations & seeders
-resources/views/    — Blade templates
-routes/web.php      — Web routes
-public/             — Public files
+app/ — Application logic
+database/ — Migrations & seeders
+resources/views/ — Blade templates
+routes/web.php — Web routes
+public/ — Public files
