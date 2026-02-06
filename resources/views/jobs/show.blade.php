@@ -20,11 +20,30 @@
     @endcan  
     --}}
 
-    @can('edit', $job)
+    {{-- @can('edit', $job)
     <p class="mt-6">
       <x-button href="/jobs/{{$job->id}}/edit">Edit Job</x-button>
     </p>
-    @endcan 
+    @endcan --}}
+
+     {{-- @auth
+      <p class="mt-6">
+        <x-button href="/jobs/{{$job->id}}/edit">Edit Job</x-button>
+      </p>
+    @endauth --}}
+    
+
+    @auth
+    {{-- <p>Job Owner ID: {{ $job->employer->user->id }}</p>
+     <p>Logged-in ID: {{ auth()->id() }}</p> --}}
+     
+      @if(auth()->id() === optional($job->employer->user)->id) {{-- optional($job->employer->user)->id, use when $job and user connect via employer --}}
+        <p class="mt-6">
+          <x-button href="/jobs/{{$job->id}}/edit">Edit Job</x-button>
+        </p>
+      @endif
+    @endauth
+
      
     
     {{-- 

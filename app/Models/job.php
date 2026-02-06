@@ -4,6 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 class job extends Model{
     // public static function all(){
     //     return [
@@ -25,6 +26,8 @@ class job extends Model{
     protected $table = 'job_listings';
     // protected $fillable = ['title', 'salary', 'employer_id'];
     protected $guarded = [];
+    protected $fillable = ['title', 'salary', 'employer_id'];
+
 
     public function employer(){
         return $this->belongsTo(Employer::class);
@@ -38,5 +41,6 @@ class job extends Model{
 {
     return $this->belongsTo(User::class, 'created_by');
 }
+
 
 }

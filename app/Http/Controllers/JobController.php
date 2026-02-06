@@ -38,13 +38,15 @@ class JobController extends Controller
             'Title'=>['required','min:3'],
             'salary'=>['required']
         ]);
-    
+   
         $job = job::create(
             [
                 'title' => request('Title'),
                 'salary' => request('salary'),
                 'employer_id' => 1,
+                
             ]);
+            
             //  Mail::to('sousdey716@gmail.com')->send(new JobPosted($job));
              Mail::to($job->employer->user)->queue(new JobPosted($job));
             // Mail::to('sousdey716@gmail.com')->send(new App\Mail\JobPosted());
@@ -78,7 +80,7 @@ class JobController extends Controller
 
     }
     public function update(job $job){
-        Gate::authorize('edit_job', $job);
+        //Gate::authorize('edit_job', $job);
         request()->validate([
             'Title'=>['required','min:3'], //Title: the name of the input field
             'salary'=>['required']
@@ -87,6 +89,8 @@ class JobController extends Controller
             'title' => request('Title'),
             'salary' => request('salary')
         ]);
+         return redirect('/jobs/'.$job->id);
+
     }
 
     // how the update function above works (Example)
@@ -98,7 +102,7 @@ class JobController extends Controller
 
 
     public function destroy(job $job){
-        Gate::authorize('edit_job', $job);
+        //Gate::authorize('edit_job', $job);
         $job->delete();
         return redirect('/jobs');
     }
