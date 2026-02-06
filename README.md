@@ -1,7 +1,7 @@
 Joblisting Laravel Project
 
 A simple job listing web application built with Laravel as part of an online tutorial.
-This project helps student learn Laravel fundamentals such as routes, controllers, models, views, migrations, and basic CRUD operations.
+This project helps students learn Laravel fundamentals such as routes, controllers, models, views, migrations, and basic CRUD operations.
 
 ![Job List](images/Job-listing-web.png)
 
